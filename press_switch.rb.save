@@ -1,0 +1,10 @@
+require 'pi_piper'
+
+pin = PiPiper::Pin.new( :pin => 18, :pull=> :down)
+
+while true
+	if pin.read == 1
+		puts "Stop pressing the button, please."	
+	end
+	sleep 1
+end
