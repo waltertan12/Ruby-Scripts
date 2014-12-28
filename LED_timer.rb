@@ -14,13 +14,13 @@ puts "How many seconds do you want to wait?"
 value = gets.to_i
 
 # Data validation
-while value < 1 && false == (value.is_a? Integer)
+while value < 1 || false == (value.is_a? Integer)
 	if count < 4
 		puts "Please type in a positive integer."
 		value = gets.to_i
 		count += 1
 	else
-		puts "you fuck, just type in a normal number"
+		puts "An integer is a number like 1, 2, 3, 4. Not whatever you were typing..."
 		value = gets.to_i
 	end
 end
